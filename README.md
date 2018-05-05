@@ -1,5 +1,7 @@
 # LED cube 
 
+![LED_cube](https://aaalearn.mystagingwebsite.com/wp-content/uploads/2018/05/featured.png)
+
 My goal for this was to make a neat LED cube "shield" for an Arduino UNO so it plugs straight into
 the Arduino.
 
