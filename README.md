@@ -72,7 +72,7 @@ Analog pin5  |      column 9
 The LEDs run at 3 volts but the Arduino UNO delivers 5 volts through it's pins, 
 so to regulate it to 3 volts connect each LED plane to it's pin with a 2k resistor.
 
-**diagram:**
+**Diagram:**
 
 ![wiring](https://aaalearn.mystagingwebsite.com/wp-content/uploads/2018/05/led_cube_wiring.png)
 
@@ -104,3 +104,11 @@ digitalWrite(plane3, HIGH);
 
 That will make the ground pins for the planes go to the same voltage as the column pins and the
 LEDs wont light up right when you power on the board.
+
+## Licensing
+
+All the code and documentation in this repository is licensed under the MIT license which can be found here: https://mit-license.org/
+
+All the pictures for this project are licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
