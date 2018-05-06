@@ -29,9 +29,66 @@ const int c7 = A3;
 const int c8 = A4;
 const int c9 = A5;
 
+/*
+ animates the "diagonal" spin, really this is impossible to explain 
+ just run it and see what it does.
 
-void spin1() {
-	
+ to get the desired effect, we rapidly turn on the horizontal rows of
+ columns one after the other, and rapidly pull the planes to ground one after
+ the other super fast and your brain thinks that they are
+ on at the same time: persistence of vision.
+*/
+void spin() {
+
+	// this needs to stay animated for about 50 milliseconds
+	// so we loop it a bunch of times
+	for (int i = 0; i < 5; ++i)
+	{
+		/*
+		 pull the first plane to ground and 
+		 turn on the first horizontal row of columns
+		*/
+		digitalWrite(plane1, LOW);
+		digitalWrite(c1, HIGH);
+		digitalWrite(c2, HIGH);
+		digitalWrite(c3, HIGH);
+		delay(3);
+		// turn off the first plane and row of columns.
+		digitalWrite(plane1, HIGH);
+		digitalWrite(c1, LOW);
+		digitalWrite(c2, LOW);
+		digitalWrite(c3, LOW);
+
+		/*
+		 pull the second plane to ground and 
+		 turn on the second horizontal row of columns
+		*/
+		digitalWrite(plane2, LOW);
+		digitalWrite(c4, HIGH);
+		digitalWrite(c5, HIGH);
+		digitalWrite(c6, HIGH);
+		delay(3);
+		// turn off the second plane and row of columns.
+		digitalWrite(plane2, HIGH);
+		digitalWrite(c4, LOW);
+		digitalWrite(c5, LOW);
+		digitalWrite(c6, LOW);
+
+		/*
+		 pull the third plane to ground and 
+		 turn on the third horizontal row of columns
+		*/
+		digitalWrite(plane3, LOW);
+		digitalWrite(c7, HIGH);
+		digitalWrite(c8, HIGH);
+		digitalWrite(c9, HIGH);
+		delay(3);
+		// turn off the third plane and row of columns.
+		digitalWrite(plane3, HIGH);
+		digitalWrite(c7, LOW);
+		digitalWrite(c8, LOW);
+		digitalWrite(c9, LOW);
+	}
 }
 
 void setup() {
@@ -60,20 +117,22 @@ void setup() {
 
 void loop() {
 
-	digitalWrite(plane2, LOW);
+	// start by turning on all the LEDs on the second plane.
+	// digitalWrite(plane2, LOW);
 
-	digitalWrite(c1, HIGH);
-	digitalWrite(c2, HIGH);
-	digitalWrite(c3, HIGH);
-	digitalWrite(c4, HIGH);
-	digitalWrite(c5, HIGH);
-	digitalWrite(c6, HIGH);
-	digitalWrite(c7, HIGH);
-	digitalWrite(c8, HIGH);
-	digitalWrite(c9, HIGH);
+	// digitalWrite(c1, HIGH);
+	// digitalWrite(c2, HIGH);
+	// digitalWrite(c3, HIGH);
+	// digitalWrite(c4, HIGH);
+	// digitalWrite(c5, HIGH);
+	// digitalWrite(c6, HIGH);
+	// digitalWrite(c7, HIGH);
+	// digitalWrite(c8, HIGH);
+	// digitalWrite(c9, HIGH);
 
-	delay(100);
-	digitalWrite(plane2, HIGH);
+	// delay(100);
+	// digitalWrite(plane2, HIGH);
 
-	spin1();
+	// spin the plane of lit LEDs, I have no idea how to explain it.
+	spin();
 }
