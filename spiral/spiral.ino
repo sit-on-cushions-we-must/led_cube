@@ -11,6 +11,8 @@
 
  I'm using digital pins 2 to 7 and analog pins 0 to 5 since the spacing 
  of the holes on my perf board doesn't allow me to use pins 8 to 13.
+
+ Author: cautiouspotato
 */
 
 // the planes of LEDs

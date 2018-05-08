@@ -3,7 +3,7 @@
 ![LED_cube](https://aaalearn.mystagingwebsite.com/wp-content/uploads/2018/05/featured.png)
 
 My goal for this was to make a neat LED cube "shield" for an Arduino UNO so it plugs straight into
-the Arduino.
+the Arduino, no jumper wires and stuff.
 
 The shield plugs into analog pins 0 to 5 and digital pins 2 to 7 on the Arduino, i couldn't use
 digital pins 8 to 13 as the spacing of pins on the Arduino and perf board wouldn't match.

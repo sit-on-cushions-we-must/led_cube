@@ -14,6 +14,8 @@
 
  this code is not well written, the tilt functions could be 
  made into one function but I'm lazy, so...
+
+  Author: cautiouspotato
 */
 
 // the planes of LEDs
