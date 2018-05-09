@@ -10,12 +10,12 @@ digital pins 8 to 13 as the spacing of pins on the Arduino and perf board wouldn
 
 # The hardware
 
-You'll need to have moderate soldering skills and about 2 to 3 hours to build this.
+You'll need to have moderate soldering skills and about 2 to 3 hours to build this thing.
 
 **Parts:**
 
-* 27 LEDs, Use diffused LEDs not clear ones, if you use the clear
-  ones any the LEDs above them will [look like they] light up with them, ghosting basically.
+* 27 LEDs, Use diffused LEDs not clear ones, if you use the clear ones any the 
+  LEDs above them will [look like they] light up with them, ghosting basically.
 
 * Three 2k resistors.
 
@@ -92,7 +92,7 @@ pins from the cube to the corresponding pins on the headers.
 
 ## notes on making animations for the cube
 
-Since I'm using an Arduino all the animations are written in c++ for the Arduino.
+I'm using an Arduino so all the animations are written in c++ for the Arduino.
 
 The pins driving the cube have to be set to low at the beginning of the program, otherwise 
 when the cube is powered on all the LEDs light up, to fix that put the following
@@ -106,6 +106,21 @@ digitalWrite(plane3, HIGH);
 
 That will make the ground pins for the planes go to the same voltage as the column pins and the
 LEDs wont light up right when you power on the board.
+
+## You have to use POV
+The cube doesn't have any isolation diodes, so in some cases trying to light up multiple LEDs
+at a time will result in some strange behavior, like if you try to turn on 
+all the LEDs in a diagonal line, like this:
+
+![diagonal_line](https://aaalearn.mystagingwebsite.com/wp-content/uploads/2018/05/diagonal.png)
+
+the whole layer will light up, because you'd have pulled all the cathodes to ground and given all the columns power.
+
+To fix that you have to use the old [persistence of vision](https://en.wikipedia.org/wiki/Persistence_of_vision) trick.
+
+By turning on only the desired LEDs one after the other really fast you can make it look
+like the cube is drawing a diagonal line, I used this to make the "barrel roll" effect for the cube.
+
 
 ## Licensing
 
