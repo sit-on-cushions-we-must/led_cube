@@ -16,6 +16,7 @@
  made into one function but I'm lazy, so...
 
  Author: Gaara95
+ This code is licensed under the MIT license: https://mit-license.org/ 
 */
 
 // the planes of LEDs

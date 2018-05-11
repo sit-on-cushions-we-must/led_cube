@@ -1,3 +1,24 @@
+/*
+ This code makes a "falling" animation for a 3x3x3 LED cube.
+
+ I'm using multiplexing to drive all the 27 LEDs this cube uses, so:
+
+ * Each vertical column of LEDs has a common anode.
+ * Each horizontal plane of LEDs has a common cathode.
+
+ This way if I connect column 1 to power and plane 1 to ground 
+ the LED at 1,0,0 turns on(read: top corner)
+
+ I'm using digital pins 2 to 7 and analog pins 0 to 5 since the spacing 
+ of the holes on my perf board doesn't allow me to use pins 8 to 13.
+
+ this code is not well written, the tilt functions could be 
+ made into one function but I'm lazy, so...
+
+ Author: Gaara95
+ This code is licensed under the MIT license: https://mit-license.org/
+*/
+
 // the planes of LEDs
 const int plane1 = 7;
 const int plane2 = 6;

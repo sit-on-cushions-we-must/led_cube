@@ -90,7 +90,7 @@ The pins that plug into each other are highlighted with matching colors.
 Send the pins of the cube through the holes on the perf board and use wires to connect the 
 pins from the cube to the corresponding pins on the headers.
 
-## notes on making animations for the cube
+## Notes on making animations for the cube
 
 I'm using an Arduino so all the animations are written in c++ for the Arduino.
 
