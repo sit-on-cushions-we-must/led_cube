@@ -109,7 +109,7 @@ and the LEDs wont light up right when you power on the board.
 
 ## You have to use POV
 The cube doesn't have any isolation diodes, so in some cases trying to light up
-multiple LEDs at a time will result in some strange behavior called ghosting: https://en.wikipedia.org/wiki/Rollover_key#Jamming,
+multiple LEDs at a time will result in some strange behavior called ghosting: https://en.wikipedia.org/wiki/Rollover_(key)#Jamming,
 like if you try to turn on all the LEDs in a diagonal line, like this:
 
 ![diagonal_line](https://aaalearn.mystagingwebsite.com/wp-content/uploads/2018/05/diagonal.png)
