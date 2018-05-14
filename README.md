@@ -1,4 +1,4 @@
-# LED cube 
+# LED cube
 
 ![LED_cube](https://aaalearn.mystagingwebsite.com/wp-content/uploads/2018/05/featured.png)
 
@@ -14,7 +14,7 @@ You'll need to have moderate soldering skills and about 2 to 3 hours to build th
 
 **Parts:**
 
-* 27 LEDs, Use diffused LEDs not clear ones, if you use the clear ones any the 
+* 27 LEDs, Use diffused LEDs not clear ones, if you use the clear ones any the
   LEDs above them will [look like they] light up with them, ghosting basically.
 
 * Three 2k resistors.
@@ -30,7 +30,7 @@ You'll need to have moderate soldering skills and about 2 to 3 hours to build th
 ## Wiring
 
 So the cube has 27 LEDs in a configuration of 9 vertical columns by 3 horizontal planes.
-To drive all those LEDs I used multiplexing (like everyone else), so all the LEDs on a 
+To drive all those LEDs I used multiplexing (like everyone else), so all the LEDs on a
 plane have a common ground pin (cathode), and all the LEDs in a column have a common power pin (anode).
 This gives me 3 ground pins and 9 power pins.
 To turn on an LED you just give it's column power and pull it's plane to ground.
@@ -47,7 +47,7 @@ For the whole cube it looks like this:
 
 
 The Arduino can only deliver about 20 milliamp of power from each pin, that's just enough
-to power 3 LEDs, so if you connect all the LEDs on a plane to a common power pin and all the 
+to power 3 LEDs, so if you connect all the LEDs on a plane to a common power pin and all the
 LEDs in a column to a common ground pin the Arduino will not be able to light up all the LEDs.
 
 Use these charts to wire the LEDs:
@@ -71,7 +71,7 @@ Analog pin3  |      column 7
 Analog pin4  |      column 8
 Analog pin5  |      column 9
 
-The LEDs run at 3 volts but the Arduino UNO delivers 5 volts through it's pins, 
+The LEDs run at 3 volts but the Arduino UNO delivers 5 volts through it's pins,
 so to regulate it to 3 volts connect each LED plane to it's pin with a 2k resistor.
 
 **Diagram:**
@@ -80,23 +80,23 @@ so to regulate it to 3 volts connect each LED plane to it's pin with a 2k resist
 
 ## Making the shield part:
 
-Solder the male header pins onto the perf board so they plug into the Arduinos analog pins 0 to 5 
+Solder the male header pins onto the perf board so they plug into the Arduinos analog pins 0 to 5
 and digital 2 to 7:
 
 ![headers](https://aaalearn.mystagingwebsite.com/wp-content/uploads/2018/05/sheild_headers.png)
 
 The pins that plug into each other are highlighted with matching colors.
 
-Send the pins of the cube through the holes on the perf board and use wires to connect the 
+Send the pins of the cube through the holes on the perf board and use wires to connect the
 pins from the cube to the corresponding pins on the headers.
 
 ## Notes on making animations for the cube
 
-I'm using an Arduino so all the animations are written in c++ for the Arduino.
+I'm using an Arduino so all the animations are written in c++.
 
-The pins driving the cube have to be set to low at the beginning of the program, otherwise 
+The "plane" pins have to be set to "HIGH" at the beginning of the program, otherwise
 when the cube is powered on all the LEDs light up, to fix that put the following
-code at the end of the `void setup()` function:
+code at the end of your `void setup()` function:
 
 ```
 digitalWrite(plane1, HIGH);
@@ -104,13 +104,13 @@ digitalWrite(plane2, HIGH);
 digitalWrite(plane3, HIGH);
 ```
 
-That will make the ground pins for the planes go to the same voltage as the column pins and the
-LEDs wont light up right when you power on the board.
+That will make the pins for the planes go to the same voltage as the column pins
+and the LEDs wont light up right when you power on the board.
 
 ## You have to use POV
-The cube doesn't have any isolation diodes, so in some cases trying to light up multiple LEDs
-at a time will result in some strange behavior, like if you try to turn on 
-all the LEDs in a diagonal line, like this:
+The cube doesn't have any isolation diodes, so in some cases trying to light up
+multiple LEDs at a time will result in some strange behavior called ghosting: https://en.wikipedia.org/wiki/Rollover_key#Jamming,
+like if you try to turn on all the LEDs in a diagonal line, like this:
 
 ![diagonal_line](https://aaalearn.mystagingwebsite.com/wp-content/uploads/2018/05/diagonal.png)
 
