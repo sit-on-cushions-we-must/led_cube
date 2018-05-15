@@ -46,7 +46,7 @@ For the whole cube it looks like this:
 ![cube_connections](https://aaalearn.mystagingwebsite.com/wp-content/uploads/2018/05/cube_side.png)
 
 
-The Arduino can only deliver about 20 milliamp of power from each pin, that's just enough
+The Arduino can only deliver about 20 milliamps from each pin, that's just enough
 to power 3 LEDs, so if you connect all the LEDs on a plane to a common power pin and all the
 LEDs in a column to a common ground pin the Arduino will not be able to light up all the LEDs.
 
@@ -81,7 +81,7 @@ so to regulate it to 3 volts connect each LED plane to it's pin with a 2k resist
 ## Making the shield part:
 
 Solder the male header pins onto the perf board so they plug into the Arduinos analog pins 0 to 5
-and digital 2 to 7:
+and digital pins 2 to 7:
 
 ![headers](https://aaalearn.mystagingwebsite.com/wp-content/uploads/2018/05/sheild_headers.png)
 
