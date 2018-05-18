@@ -43,7 +43,7 @@ The lines highlighted in red are the anodes and the ones in blue are the cathode
 
 For the whole cube it looks like this:
 
-![cube_connections](https://aaalearn.mystagingwebsite.com/wp-content/uploads/2018/05/cube_side.png)
+![cube_connections](https://aaalearn.mystagingwebsite.com/wp-content/uploads/2018/05/multiplexing2.jpg)
 
 
 The Arduino can only deliver about 20 milliamps from each pin, that's just enough
