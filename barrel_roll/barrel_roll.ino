@@ -6,17 +6,17 @@
  * Each vertical column of LEDs has a common anode.
  * Each horizontal plane of LEDs has a common cathode.
 
- This way if I connect column 1 to power and plane 1 to ground 
+ This way if I connect column 1 to power and plane 1 to ground
  the LED at 1,0,0 turns on(read: top corner)
 
- I'm using digital pins 2 to 7 and analog pins 0 to 5 since the spacing 
+ I'm using digital pins 2 to 7 and analog pins 0 to 5 since the spacing
  of the holes on my perf board doesn't allow me to use pins 8 to 13.
 
- this code is not well written, the tilt functions could be 
+ this code is not well written, the tilt functions could be
  made into one function but I'm lazy, so...
 
  Author: cautiouspotato
- This code is licensed under the MIT license: https://mit-license.org/ 
+ This code is licensed under the MIT license: https://mit-license.org/
 */
 
 // the planes of LEDs
@@ -37,7 +37,7 @@ const int c9 = A5;
 
 
 /*////////////////////////////////////////////////////////////////////////////
- these functions animate the "diagonal" spin, really 
+ these functions animate the "diagonal" spin, really
  this is impossible to explain just run it and see what it does.
 
  to get the desired effect, we rapidly turn on the horizontal rows of
@@ -51,9 +51,9 @@ void spinLeft() {
 
 	// this needs to stay animated for about 100 milliseconds
 	// so we loop it a bunch of times
-	for (int i = 0; i < 10; ++i) {
+	for (int i = 0; i < 20; ++i) {
 		/*
-		 pull the first plane to ground and 
+		 pull the first plane to ground and
 		 turn on the first horizontal row of columns
 		*/
 		digitalWrite(plane1, LOW);
@@ -68,7 +68,7 @@ void spinLeft() {
 		digitalWrite(c3, LOW);
 
 		/*
-		 pull the second plane to ground and 
+		 pull the second plane to ground and
 		 turn on the second horizontal row of columns
 		*/
 		digitalWrite(plane2, LOW);
@@ -83,7 +83,7 @@ void spinLeft() {
 		digitalWrite(c6, LOW);
 
 		/*
-		 pull the third plane to ground and 
+		 pull the third plane to ground and
 		 turn on the third horizontal row of columns
 		*/
 		digitalWrite(plane3, LOW);
@@ -104,9 +104,9 @@ void spinRight() {
 
 	// this needs to stay animated for about 100 milliseconds
 	// so we loop it a bunch of times
-	for (int i = 0; i < 10; ++i) {
+	for (int i = 0; i < 20; ++i) {
 		/*
-		 pull the first plane to ground and 
+		 pull the first plane to ground and
 		 turn on the first horizontal row of columns
 		*/
 		digitalWrite(plane1, LOW);
@@ -121,7 +121,7 @@ void spinRight() {
 		digitalWrite(c9, LOW);
 
 		/*
-		 pull the second plane to ground and 
+		 pull the second plane to ground and
 		 turn on the second horizontal row of columns
 		*/
 		digitalWrite(plane2, LOW);
@@ -136,7 +136,7 @@ void spinRight() {
 		digitalWrite(c6, LOW);
 
 		/*
-		 pull the third plane to ground and 
+		 pull the third plane to ground and
 		 turn on the third horizontal row of columns
 		*/
 		digitalWrite(plane3, LOW);
@@ -192,7 +192,7 @@ void loop() {
 	digitalWrite(c8, HIGH);
 	digitalWrite(c9, HIGH);
 
-	delay(100);
+	delay(200);
 	digitalWrite(plane2, HIGH);
 
 	// tilt the plane of lit LEDs to the left
@@ -207,7 +207,7 @@ void loop() {
 	digitalWrite(c5, HIGH);
 	digitalWrite(c6, HIGH);
 
-	delay(100);
+	delay(200);
 	digitalWrite(plane1, HIGH);
 	digitalWrite(plane2, HIGH);
 	digitalWrite(plane3, HIGH);
