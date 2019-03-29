@@ -31,6 +31,7 @@
  of the holes on my perf board doesn't allow me to use pins 8 to 13.
 
  Author: cautiouspotato
+ git repo: https://github.com/sit-on-cushions-we-must/led_cube
  This code is licensed under the MIT license: https://mit-license.org/
 */
 

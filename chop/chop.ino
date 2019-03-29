@@ -16,6 +16,7 @@
  made into one function but I'm lazy, so...
 
  Author: Gaara95
+ git repo: https://github.com/sit-on-cushions-we-must/led_cube
  This code is licensed under the MIT license: https://mit-license.org/ 
 */
 

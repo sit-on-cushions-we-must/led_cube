@@ -1,5 +1,5 @@
 /*
- This code makes a "falling" animation for a 3x3x3 LED cube.
+ This code makes a falling (like rain) animation for a 3x3x3 LED cube.
 
  I'm using multiplexing to drive all the 27 LEDs this cube uses, so:
 
@@ -16,6 +16,7 @@
  made into one function but I'm lazy, so...
 
  Author: Gaara95
+ git repo: https://github.com/sit-on-cushions-we-must/led_cube
  This code is licensed under the MIT license: https://mit-license.org/
 */
 
