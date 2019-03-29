@@ -49,7 +49,7 @@ const int c9 = A5;
 // tilts the plane of lit LEDs to the left
 void spinLeft() {
 
-	// this needs to stay animated for about 100 milliseconds
+	// this needs to stay animated for about 200 milliseconds
 	// so we loop it a bunch of times
 	for (int i = 0; i < 20; ++i) {
 		/*
@@ -102,7 +102,7 @@ void spinLeft() {
 // tilts the plane of lit LEDs to the right
 void spinRight() {
 
-	// this needs to stay animated for about 100 milliseconds
+	// this needs to stay animated for about 200 milliseconds
 	// so we loop it a bunch of times
 	for (int i = 0; i < 20; ++i) {
 		/*
