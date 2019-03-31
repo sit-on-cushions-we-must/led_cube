@@ -68,99 +68,121 @@ void loop() {
 
 	// turn them on one after the other
 	digitalWrite(plane1, LOW);
-	delay(200);
+	delay(100);
 	digitalWrite(plane2, LOW);
-	delay(200);
+	delay(100);
 	digitalWrite(plane3, LOW);
-	delay(20);
+	delay(100);
 
 	// then turn them off one after the other
 	digitalWrite(plane1, HIGH);
-	delay(200);
+	delay(100);
 	digitalWrite(plane2, HIGH);
-	delay(200);
+	delay(100);
 	digitalWrite(plane3, HIGH);
-	delay(20);
+	delay(100);
 
+	// then turn it off
 	digitalWrite(c1, LOW);
 
+	// rinse repeat
 	digitalWrite(c5, HIGH);
 	digitalWrite(c7, HIGH);
 	digitalWrite(c9, HIGH);
 
 	digitalWrite(plane1, LOW);
-	delay(200);
+	delay(100);
 	digitalWrite(plane2, LOW);
-	delay(200);
+	delay(100);
 	digitalWrite(plane3, LOW);
-	delay(20);
+	delay(100);
 
 	digitalWrite(plane1, HIGH);
-	delay(200);
+	delay(100);
 	digitalWrite(plane2, HIGH);
-	delay(200);
+	delay(100);
 	digitalWrite(plane3, HIGH);
-	delay(20);
+	delay(100);
 
 	digitalWrite(c5, LOW);
 	digitalWrite(c7, LOW);
 	digitalWrite(c9, LOW);
 
-  digitalWrite(c2, HIGH);
-  digitalWrite(c8, HIGH);
+  	digitalWrite(c2, HIGH);
+  	digitalWrite(c8, HIGH);
 
-  digitalWrite(plane1, LOW);
-  delay(200);
-  digitalWrite(plane2, LOW);
-  delay(200);
-  digitalWrite(plane3, LOW);
-  delay(20);
+  	digitalWrite(plane1, LOW);
+  	delay(100);
+  	digitalWrite(plane2, LOW);
+  	delay(100);
+  	digitalWrite(plane3, LOW);
+  	delay(100);
 
-  digitalWrite(plane1, HIGH);
-  delay(200);
-  digitalWrite(plane2, HIGH);
-  delay(200);
-  digitalWrite(plane3, HIGH);
-  delay(20);
+  	digitalWrite(plane1, HIGH);
+  	delay(100);
+  	digitalWrite(plane2, HIGH);
+  	delay(100);
+  	digitalWrite(plane3, HIGH);
+  	delay(100);
 
-  digitalWrite(c2, LOW);
-  digitalWrite(c8, LOW);
+  	digitalWrite(c2, LOW);
+  	digitalWrite(c8, LOW);
 
-  digitalWrite(c9, HIGH);
+  	digitalWrite(c9, HIGH);
 
-  digitalWrite(plane1, LOW);
-  delay(200);
-  digitalWrite(plane2, LOW);
-  delay(200);
-  digitalWrite(plane3, LOW);
-  delay(20);
+ 	digitalWrite(plane1, LOW);
+ 	delay(100);
+ 	digitalWrite(plane2, LOW);
+ 	delay(100);
+ 	digitalWrite(plane3, LOW);
+ 	delay(100);
 
-  digitalWrite(plane1, HIGH);
-  delay(200);
-  digitalWrite(plane2, HIGH);
-  delay(200);
-  digitalWrite(plane3, HIGH);
-  delay(20);
+  	digitalWrite(plane1, HIGH);
+  	delay(100);
+  	digitalWrite(plane2, HIGH);
+  	delay(100);
+  	digitalWrite(plane3, HIGH);
+  	delay(100);
 
-  digitalWrite(c9, LOW);
+  	digitalWrite(c9, LOW);
 
-  digitalWrite(c7, HIGH);
-  digitalWrite(c6, HIGH);
+  	digitalWrite(c7, HIGH);
+  	digitalWrite(c6, HIGH);
 
-  digitalWrite(plane1, LOW);
-  delay(200);
-  digitalWrite(plane2, LOW);
-  delay(200);
-  digitalWrite(plane3, LOW);
-  delay(20);
+  	digitalWrite(plane1, LOW);
+  	delay(100);
+  	digitalWrite(plane2, LOW);
+  	delay(100);
+  	digitalWrite(plane3, LOW);
+  	delay(100);
 
-  digitalWrite(plane1, HIGH);
-  delay(200);
-  digitalWrite(plane2, HIGH);
-  delay(200);
-  digitalWrite(plane3, HIGH);
-  delay(20);
+  	digitalWrite(plane1, HIGH);
+  	delay(100);
+  	digitalWrite(plane2, HIGH);
+  	delay(100);
+  	digitalWrite(plane3, HIGH);
+  	delay(100);
 
-  digitalWrite(c7, LOW);
-  digitalWrite(c6, LOW);
+  	digitalWrite(c7, LOW);
+  	digitalWrite(c6, LOW);
+
+  	digitalWrite(c3, HIGH);
+  	digitalWrite(c4, HIGH);
+
+  	digitalWrite(plane1, LOW);
+  	delay(100);
+  	digitalWrite(plane2, LOW);
+  	delay(100);
+  	digitalWrite(plane3, LOW);
+  	delay(100);
+
+  	digitalWrite(plane1, HIGH);
+  	delay(100);
+  	digitalWrite(plane2, HIGH);
+  	delay(100);
+  	digitalWrite(plane3, HIGH);
+  	delay(100);
+
+  	digitalWrite(c3, LOW);
+  	digitalWrite(c4, LOW);
 }
